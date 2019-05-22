@@ -1,0 +1,20 @@
+# Default packages
+
+#Example
+#package_list:
+#  # 7-zip
+#  - filename: 7z1805.exe
+#    product_id: 7-Zip
+#    arguments: /S
+#  # Notepad++
+#  - filename: npp.7.5.8.Installer.exe
+#    product_id: Notepad++
+#    arguments: /S
+#  # Compare It!
+#  - filename: wincmp-setup.exe
+#    product_id: Compare It!_is1
+#    arguments: /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-
+#  # Putty
+#  - filename: putty-64bit-0.70-installer.msi
+#    product_id: '{45B3032F-22CC-40CD-9E97-4DA7095FA5A2}'
+#    arguments: '/q'

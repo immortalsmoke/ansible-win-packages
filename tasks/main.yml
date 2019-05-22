@@ -1,0 +1,19 @@
+#Installs commonly used Windows programs
+
+- name: Creating temp dir
+  win_file:
+    path: C:\Temp
+    state: directory
+
+- name: Copying packages over to the target host
+  win_copy:
+    src: "files/{{ item.filename }}"
+    dest: "C:\\Temp\\{{ item.filename }}"
+  with_items: "{{ package_list }}"
+
+- name: Installing packages
+  win_package:
+    path: "C:\\Temp\\{{ item.filename }}"
+    product_id: "{{ item.product_id }}"
+    arguments: "{{ item.arguments }}"
+  with_items: "{{ package_list }}"
